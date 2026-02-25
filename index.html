@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nutrihealth - Trasplante Capilar Avanzado</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e692d',
+                        secondary: '#c1cf46',
+                        softGrey: '#f4f4f4',
+                        darkGrey: '#444444',
+                        accent: '#164d21',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .video-aspect {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-aspect iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(193, 207, 70, 0.1) 0%, rgba(255, 255, 255, 1) 60%);
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: #1e692d;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Mejora de legibilidad en móviles para textos largos */
+        @media (max-width: 640px) {
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Animación del carrusel */
+        .carrusel-animado {
+            animation: deslizar 20s linear infinite;
+        }
+
+        @keyframes deslizar {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-sans leading-relaxed">
+
+    <!--  Barra Urgencia -->
+    <div
+        class="bg-secondary text-black text-center text-[10px] md:text-xs font-bold py-2 px-4 tracking-wider uppercase">
+        CUPOS LIMITADOS PARA DIAGNÓSTICO GRATUITO ESTA SEMANA
+    </div>
+
+    <!-- NAV -->
+    <nav class="bg-white/95 backdrop-blur-sm py-3 md:py-4 px-4 md:px-8 sticky top-0 z-50 border-b border-softGrey">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Logo Actualizado con Imagen -->
+                <a href="/" class="flex items-center">
+                    <img src="https://nutrihealth.com.do/wp-content/uploads/2025/10/cropped-nutrihealth-logo-nuevo.png"
+                        alt="Logo Nutrihealth" class="h-10 md:h-14 w-auto object-contain"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback en caso de que la imagen no cargue -->
+                    <div class="hidden flex-col">
+                        <span
+                            class="font-extrabold text-lg md:text-2xl text-primary leading-none tracking-tighter">NUTRIHEALTH</span>
+                        <span
+                            class="text-[7px] md:text-[9px] uppercase tracking-[0.2em] font-bold text-darkGrey">Medicina
+                            Capilar & Estética</span>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#contacto"
+                class="bg-primary text-white px-4 py-2 md:px-7 md:py-3 rounded-full font-bold text-[10px] md:text-sm shadow-lg hover:bg-accent transition-all">
+                AGENDAR
+            </a>
+        </div>
+    </nav>
+
+    <!--  HERO SECTION -->
+    <section class="pt-8 md:pt-16 pb-12 md:pb-20 px-5 hero-gradient overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
+
+            <div
+                class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-[9px] md:text-xs mb-6 md:mb-8 tracking-widest uppercase border border-primary/20">
+                Especialistas en Técnicas FUE + DHI
+            </div>
+
+            <!-- VIDEO -->
+            <div class="w-full max-w-4xl mx-auto">
+                <div
+                    class="p-1.5 md:p-4 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-softGrey">
+                    <div class="video-aspect rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden bg-black">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/p5tNVhAwkt4?si=g3eY6OGLNyfvD0CA&amp;controls=0"
+                            title="Las Mejores Transformaciones Antes y Después" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="text-3xl md:text-7xl font-extrabold leading-[1.1] mb-6 mt-6 md:mb-8 max-w-5xl">
+                Recupera tu <span class="text-primary italic">cabello</span>,<br>
+                recupera tu <span class="relative">
+                    confianza.
+                    <svg class="absolute -bottom-1 md:-bottom-2 left-0 w-full h-1 md:h-2" viewBox="0 0 100 10"
+                        preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 0 100 5" stroke="#c1cf46" stroke-width="4" fill="none" />
+                    </svg>
+                </span>
+            </h1>
+
+
+
+            <p class="text-base md:text-2xl text-darkGrey mb-8 md:mb-10 max-w-3xl font-light px-2">
+                Trasplante capilar con técnicas avanzadas, con resultados <span
+                    class="font-bold text-black italic">naturales y permanentes</span>.
+            </p>
+
+
+
+            <div class="flex flex-col md:flex-row gap-4 mb-10 md:mb-14 w-full md:w-auto justify-center px-4 md:px-0">
+                <a href="#contacto"
+                    class="bg-secondary text-black px-6 py-4 md:px-10 md:py-5 rounded-2xl font-extrabold text-base md:text-xl shadow-[0_15px_30px_-5px_rgba(193,207,70,0.4)] hover:scale-105 active:scale-95 transition-transform text-center">
+                    AGENDA TU EVALUACIÓN GRATUITA
+                </a>
+            </div>
+
+            <!-- Puntos Extra en el Hero -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-8 text-left max-w-4xl mx-auto text-xs md:text-sm font-semibold text-darkGrey mb-6 md:mb-8 px-4">
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> Hasta 5,000 Grafts</div>
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> De 6 a 8 horas de Procedimiento
+                </div>
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> +4,000 pacientes satisfechos
+                </div>
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> Especialistas certificados
+                </div>
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> Resultados 100% naturales</div>
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> Técnica FUE + DHI</div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- EL PROBLEMA -->
+    <section class="pt-4 md:pt-16 pb-12 md:pb-20 px-5 bg-white overflow-hidden">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-2xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight">
+                    ¿Te ves más viejo de lo que <span class="text-primary italic">realmente eres?</span>
+                </h2>
+                <div class="space-y-4 md:space-y-6 text-darkGrey text-base md:text-lg leading-relaxed">
+                    <p>¿Evitas tomarte fotos porque no te gusta cómo luce tu cabello? Sientes que la caída está
+                        afectando tu seguridad y la forma en que te proyectas ante los demás.</p>
+                    <p class="font-semibold text-black italic">Si te identificas con esto, no es solo un tema estético:
+                        es tu confianza, tu imagen y tu actitud lo que se está viendo impactado día tras día.</p>
+                    <p>La buena noticia es que no tienes que resignarte; hoy existen soluciones definitivas. <span
+                            class="text-primary font-bold underline"><a href="#contacto">Eres candidato para un cambio
+                                real.</a></span></p>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative w-full">
+                <div class="absolute inset-0 bg-secondary/10 blur-3xl rounded-full"></div>
+                <div
+                    class="relative bg-softGrey h-[300px] md:h-[400px] rounded-[2rem] md:rounded-[3rem] border border-softGrey overflow-hidden">
+                    <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-resultado3.jpeg"
+                        alt="Hombre recuperando seguridad" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LA SOLUCIÓN -->
+    <section class="py-16 md:py-32 px-5 bg-softGrey/50 border-y border-softGrey">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-5xl font-extrabold mb-4 md:mb-6 px-4">Nuestro Plan Todo Incluido</h2>
+                <p class="text-darkGrey text-base md:text-lg max-w-2xl mx-auto px-4">Diseñamos una experiencia VIP para
+                    que tu única preocupación sea disfrutar de tu nuevo cabello.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+                <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary flex items-center gap-3">
+                        <span
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary text-white text-xs md:text-sm flex items-center justify-center flex-shrink-0">1</span>
+                        El Procedimiento
+                    </h3>
+                    <ul class="space-y-3 md:space-y-4 check-list font-medium text-sm md:text-base">
+                        <li>Valoración médica personalizada</li>
+                        <li>Diseño frontal personalizado</li>
+                        <li>Trasplante capilar, barba o cejas (FUE)</li>
+                        <li>Anestesia local</li>
+                        <li>Cofre Break durante la cirugía (snack saludable + bebida)</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary flex items-center gap-3">
+                        <span
+                            class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary text-white text-xs md:text-sm flex items-center justify-center flex-shrink-0">2</span>
+                        Post y Garantía
+                    </h3>
+                    <ul class="space-y-3 md:space-y-4 check-list font-medium text-sm md:text-base">
+                        <li>Alojamiento y Transporte VIP</li>
+                        <li>Kit postoperatorio completo</li>
+                        <li>1er Lavado de costra por el doctor</li>
+                        <li>Certificado de Garantía por escrito</li>
+                        <li>1 Sesión de Mesoterapia dia del procedimiento (Mesoterapia con 4 tipos de factores de
+                            crecimiento)</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center px-4">
+                <a href="#contacto"
+                    class="inline-block w-full md:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl shadow-xl hover:bg-accent transition-all">
+                    AGENDAR EVALUACIÓN
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANTES Y DESPUÉS -->
+    <section class="py-16 md:py-32 px-5 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl md:text-5xl font-extrabold mb-10 md:mb-16 italic underline decoration-secondary">
+                Resultados Reales
+            </h2>
+
+            <!-- CONTENEDOR: oculta lo que se sale -->
+            <div style="overflow: hidden; width: 100%;">
+
+                <!-- CARRUSEL -->
+                <div class="carrusel">
+
+                    <!-- TARJETA 1 -->
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Antesydespues-e1771454449447.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">6 Meses de avance</p>
+                    </div>
+
+                    <!-- TARJETA 2 -->
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-4187.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Frontal y relleno entradas</p>
+                    </div>
+
+                    <!-- TARJETA 3 -->
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-2327.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Restauracion de linea frontal y entradas</p>
+                    </div>
+
+                    <!-- TARJETA 4 -->
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-3000.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Relleno y entrada corazon</p>
+                    </div>
+
+                    <!-- COPIAS PARA EL LOOP -->
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Antesydespues-e1771454449447.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">6 Meses de avance capilar</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-4187.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Frontal y relleno entradas</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-2327.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Restauracion de linea frontal y entradas</p>
+                    </div>
+
+                    <div class="flex-shrink-0 w-[260px] bg-softGrey p-3 rounded-2xl border border-softGrey">
+                        <img src="https://nutrihealth.com.do/wp-content/uploads/2026/02/img-3000.jpeg"
+                            class="h-64 w-full rounded-xl mb-3 object-cover cursor-pointer"
+                            onclick="abrirLightbox(this.src)">
+                        <p class="font-bold text-darkGrey text-sm">Relleno y entrada corazon</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ¿CÓMO FUNCIONA? -->
+    <section class="py-16 md:py-32 px-5 bg-black text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-5xl font-bold text-center mb-12 md:mb-20 text-secondary">¿CÓMO FUNCIONA?</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 text-center">
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
+                        1</div>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Evaluación</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Valoración médica personalizada.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
+                        2</div>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Diseño de línea capilar</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Línea capilar ideal para tu rostro.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
+                        3</div>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Procedimiento</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Intervención precisa y segura.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
+                        4</div>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Seguimiento post</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Acompañamiento por 12 meses.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 md:mt-20 text-center px-4">
+                <a href="#contacto"
+                    class="inline-block w-full md:w-auto bg-secondary text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 active:scale-95 transition-all">
+                    AGENDA TU CITA AHORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--  QUIÉNES SOMOS -->
+    <section class="py-16 md:py-32 px-5 bg-white overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div class="md:w-1/2 relative w-full order-2 md:order-1">
+                <div
+                    class="bg-softGrey h-[800px] md:h-[800] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm">
+                    <video src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Video2.mp4"
+                        class="w-full h-full object-cover" controls playsinline loop></video>
+                </div>
+                <div
+                    class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-white shadow-xl p-4 md:p-6 rounded-2xl border border-softGrey flex items-center gap-3 md:gap-4">
+                    <div
+                        class="w-10 h-10 md:w-12 md:h-12 bg-primary text-white flex items-center justify-center rounded-lg font-bold">
+                        10+</div>
+                    <div class="text-[10px] md:text-xs font-bold leading-tight uppercase">AÑOS DE <br> EXPERIENCIA</div>
+                </div>
+            </div>
+            <div class="md:w-1/2 order-1 md:order-2">
+                <h2 class="text-2xl md:text-5xl font-bold mb-6 md:mb-8 text-primary">QUIÉNES SOMOS</h2>
+                <div class="space-y-4 md:space-y-6 text-darkGrey leading-relaxed text-sm md:text-base">
+                    <p>Contamos con más de <strong class="text-primary">10 años de experiencia</strong> en el país,
+                        respaldados por un equipo de especialistas dominicanos y colombianos, incluyendo cirujano
+                        capilar y dermatólogo cirujano altamente capacitados.</p>
+                    <p>Trabajamos con la última tecnología en injerto capilar utilizando las técnicas FUE y DHI,
+                        garantizando resultados naturales y seguros. Nuestra clínica está ubicada en una zona premium
+                        del Distrito Nacional y estamos debidamente avalados por Salud Pública y Certificados por
+                        INDOCAL, lo que te brinda la confianza y seguridad que mereces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="py-16 md:py-32 px-5 bg-softGrey/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-5xl font-bold text-center mb-10 md:mb-16">Dudas Frecuentes</h2>
+            <div class="space-y-3 md:space-y-4">
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Duele?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">No. El procedimiento se realiza
+                        con anestesia local, por lo que no sentirás dolor durante la cirugía. Puede haber una leve
+                        molestia los primeros días, totalmente manejable.</p>
+                </details>
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Cuánto dura?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">Depende del número de injertos,
+                        pero generalmente el procedimiento dura entre 6 y 8 horas en una sola sesión.</p>
+                </details>
+
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Se cae el cabello después?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">Sí, es normal que el cabello
+                        trasplantado se caiga en las primeras semanas. Es parte del proceso antes de que comience a
+                        crecer de forma definitiva.</p>
+                </details>
+
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Cuándo veo resultados?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">Los primeros cambios se notan a
+                        partir del tercer mes, pero los resultados más visibles aparecen entre los 6 y 12 meses.</p>
+                </details>
+
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Es para mujeres también?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">Sí. El trasplante capilar también
+                        es una excelente opción para mujeres con pérdida de densidad o zonas despobladas.</p>
+                </details>
+
+                <details
+                    class="group bg-white border border-softGrey rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm md:text-lg list-none">
+                        ¿Cuánto cuesta?
+                        <span class="text-primary group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <p class="mt-4 text-darkGrey text-xs md:text-base leading-relaxed">El costo varía según el grado de
+                        alopecia y la cantidad de injertos necesarios. Se determina luego de una evaluación
+                        personalizada.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL CON FORMULARIO ACTUALIZADO -->
+    <section id="contacto" class="py-12 md:py-32 px-4 bg-white relative">
+        <div class="max-w-6xl mx-auto">
+            <div
+                class="bg-primary rounded-[2rem] md:rounded-[4rem] shadow-2xl p-6 md:p-20 text-white grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-6xl font-extrabold mb-6 md:mb-8 leading-tight text-secondary">Da el
+                        primer paso hoy.</h2>
+                    <p class="text-base md:text-xl text-white/80 mb-8 font-light italic leading-relaxed">Agenda tu
+                        evaluación capilar ahora</p>
+                </div>
+
+                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-12 text-black shadow-xl">
+                    <h3 class="text-xl font-bold mb-6 text-center">SOLICITAR EVALUACIÓN</h3>
+                    <form id="contactForm" class="space-y-4 md:space-y-5">
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Nombre</label>
+                            <input type="text" id="form-name" required placeholder="Tu nombre completo"
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Edad</label>
+                            <input type="number" id="form-age" required placeholder="Ej: 35"
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Correo
+                                Electrónico</label>
+                            <input type="email" id="form-email" required placeholder="ejemplo@correo.com"
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Teléfono
+                                / WhatsApp</label>
+                            <input type="tel" id="form-phone" required placeholder="809-000-0000"
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-secondary text-black py-4 md:py-5 rounded-xl md:rounded-2xl font-extrabold text-base md:text-lg shadow-lg uppercase tracking-widest active:scale-95 transition-all">
+                            ENVIAR DATOS
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-10 md:py-16 px-6 text-center border-t border-softGrey">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col items-center mb-6">
+                <!-- Logo Footer -->
+                <img src="https://nutrihealth.com.do/wp-content/uploads/2025/10/cropped-nutrihealth-logo-nuevo.png"
+                    alt="Logo Nutrihealth Footer" class="h-8 md:h-12 w-auto object-contain mb-4">
+            </div>
+            <p class="text-[9px] text-gray-400 leading-relaxed max-w-sm mx-auto">
+                Distrito Nacional, Santo Domingo. <br>
+                © 2026 Nutrihealth.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para enviar a WhatsApp con auto-llenado
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('form-name').value;
+            const age = document.getElementById('form-age').value;
+            const email = document.getElementById('form-email').value;
+            const phone = document.getElementById('form-phone').value;
+
+            // Número de destino (Cámbialo por el real de Nutrihealth)
+            const waNumber = "+18299139470";
+
+            // Mensaje formateado para WhatsApp
+            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Edad:* ${age} años%0A *Teléfono:* ${phone}%0A *Correo Electrónico:* ${email}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
+
+            // Crear el enlace final
+            const whatsappUrl = `https://wa.me/${waNumber}?text=${message}`;
+
+            // Abrir en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="cerrarLightbox()" style="
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+">
+        <img id="lightbox-img" src="" alt="" style="
+        max-width: 90%;
+        max-height: 90vh;
+        border-radius: 1rem;
+        object-fit: contain;
+    ">
+    </div>
+
+    <script>
+        function abrirLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function cerrarLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
