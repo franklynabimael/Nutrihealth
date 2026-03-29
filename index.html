@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="animation.css">
     <script>
         tailwind.config = {
             theme: {
@@ -128,19 +127,7 @@
                 Especialistas en Técnicas FUE + DHI
             </div>
 
-            <!-- VIDEO -->
-            <div class="w-full max-w-4xl mx-auto">
-                <div
-                    class="p-1.5 md:p-4 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-softGrey">
-                    <div class="video-aspect rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden bg-black">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/p5tNVhAwkt4?si=g3eY6OGLNyfvD0CA&amp;controls=0"
-                            title="Las Mejores Transformaciones Antes y Después" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+
 
             <h1 class="text-3xl md:text-7xl font-extrabold leading-[1.1] mb-6 mt-6 md:mb-8 max-w-5xl">
                 Recupera tu <span class="text-primary italic">cabello</span>,<br>
@@ -167,6 +154,20 @@
                     class="bg-secondary text-black px-6 py-4 md:px-10 md:py-5 rounded-2xl font-extrabold text-base md:text-xl shadow-[0_15px_30px_-5px_rgba(193,207,70,0.4)] hover:scale-105 active:scale-95 transition-transform text-center">
                     AGENDA TU EVALUACIÓN GRATUITA
                 </a>
+            </div>
+
+            <!-- VIDEO -->
+            <div class="w-full max-w-4xl mx-auto">
+                <div
+                    class="p-1.5 md:p-4 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-softGrey">
+                    <div class="video-aspect rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden bg-black">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/p5tNVhAwkt4?si=g3eY6OGLNyfvD0CA&amp;controls=0"
+                            title="Las Mejores Transformaciones Antes y Después" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
             <!-- Puntos Extra en el Hero -->
@@ -398,7 +399,7 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div class="md:w-1/2 relative w-full order-2 md:order-1">
                 <div
-                    class="bg-softGrey h-[800px] md:h-[800] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm">
+                    class="bg-softGrey h-[600px] md:h-[600px] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm">
                     <video src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Video2.mp4"
                         class="w-full h-full object-cover" controls playsinline loop></video>
                 </div>
@@ -518,24 +519,34 @@
                         </div>
                         <div>
                             <label
-                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Edad</label>
-                            <input type="number" id="form-age" required placeholder="Ej: 35"
-                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
-                        </div>
-                        <div>
-                            <label
-                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Correo
-                                Electrónico</label>
-                            <input type="email" id="form-email" required placeholder="ejemplo@correo.com"
-                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
-                        </div>
-                        <div>
-                            <label
                                 class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Teléfono
                                 / WhatsApp</label>
                             <input type="tel" id="form-phone" required placeholder="809-000-0000"
                                 class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
                         </div>
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">Edad</label>
+                            <input type="number" id="form-age" required placeholder="Ej: 35"
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-darkGrey mb-1.5">
+                                Zona de caída
+                            </label>
+                            <select id="form-zone" required
+                                class="w-full bg-softGrey p-3 md:p-4 rounded-xl outline-none focus:ring-2 focus:ring-secondary text-sm text-gray-500">
+                                <option value="" disabled selected>Selecciona tu zona de caída</option>
+                                <option value="frontal">Zona frontal (entradas)</option>
+                                <option value="corona">Corona / vertex</option>
+                                <option value="temporal-izq">Zona temporal izquierda</option>
+                                <option value="temporal-der">Zona temporal derecha</option>
+                                <option value="fronto-temporal">Zona fronto-temporal</option>
+                                <option value="occipital">Zona occipital</option>
+                                <option value="total">Alopecia total / difusa</option>
+                            </select>
+                        </div>
+
                         <button type="submit"
                             class="w-full bg-secondary text-black py-4 md:py-5 rounded-xl md:rounded-2xl font-extrabold text-base md:text-lg shadow-lg uppercase tracking-widest active:scale-95 transition-all">
                             ENVIAR DATOS
@@ -556,7 +567,7 @@
             </div>
             <p class="text-[9px] text-gray-400 leading-relaxed max-w-sm mx-auto">
                 Distrito Nacional, Santo Domingo. <br>
-                © 2026 Nutrihealth.
+                © 2026 Nutrihealth.com.do
             </p>
         </div>
     </footer>
@@ -570,14 +581,14 @@
 
             const name = document.getElementById('form-name').value;
             const age = document.getElementById('form-age').value;
-            const email = document.getElementById('form-email').value;
+            const zone = document.getElementById('form-zone').value;
             const phone = document.getElementById('form-phone').value;
 
-            // Número de destino (Cámbialo por el real de Nutrihealth)
+            // Número de destino 
             const waNumber = "+18299139470";
 
             // Mensaje formateado para WhatsApp
-            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Edad:* ${age} años%0A *Teléfono:* ${phone}%0A *Correo Electrónico:* ${email}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
+            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Edad:* ${age} años%0A *Teléfono:* ${phone}%0A *Zona de caída:* ${zone}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
 
             // Crear el enlace final
             const whatsappUrl = `https://wa.me/${waNumber}?text=${message}`;
@@ -616,6 +627,199 @@
             document.getElementById('lightbox').style.display = 'none';
         }
     </script>
-</body>
+
+<!-- BOTÓN FLOTANTE WHATSAPP CON POPUP -->
+
+<!-- Fondo oscuro detrás del popup -->
+<div id="wa-overlay" onclick="cerrarPopup()" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+"></div>
+
+<!-- Ventana del popup -->
+<div id="wa-popup" style="
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 9999;
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  width: 300px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  font-family: Montserrat, sans-serif;
+">
+  <!-- Cabecera verde -->
+  <div style="
+    background: #25D366;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: -24px -24px 20px -24px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.428a.5.5 0 0 0 .609.61l5.7-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.368l-.36-.214-3.724.968.993-3.63-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+    </svg>
+    <div>
+      <div style="color:white; font-weight:700; font-size:14px;">Nutrihealth</div>
+      <div style="color:rgba(255,255,255,0.85); font-size:11px;">Respondemos en minutos</div>
+    </div>
+    <!-- Botón cerrar -->
+    <button onclick="cerrarPopup()" style="
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+    ">✕</button>
+  </div>
+
+  <!-- Mensaje -->
+  <p style="font-size:13px; color:#444; margin:0 0 16px; line-height:1.5;">
+    ¡Hola! Para conectarte con un especialista, dinos tu nombre y teléfono
+  </p>
+
+  <!-- Campo Nombre -->
+  <div style="margin-bottom: 12px;">
+    <label style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#666; display:block; margin-bottom:5px;">
+      Nombre
+    </label>
+    <input type="text" id="wa-nombre" placeholder="Tu nombre completo" style="
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1.5px solid #e0e0e0;
+      font-family: Montserrat, sans-serif;
+      font-size: 13px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    " onfocus="this.style.borderColor='#25D366'" onblur="this.style.borderColor='#e0e0e0'">
+  </div>
+
+  <!-- Campo Teléfono -->
+  <div style="margin-bottom: 18px;">
+    <label style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#666; display:block; margin-bottom:5px;">
+      Teléfono / WhatsApp
+    </label>
+    <input type="tel" id="wa-telefono" placeholder="809-000-0000" style="
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1.5px solid #e0e0e0;
+      font-family: Montserrat, sans-serif;
+      font-size: 13px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    " onfocus="this.style.borderColor='#25D366'" onblur="this.style.borderColor='#e0e0e0'">
+  </div>
+
+  <!-- Botón Enviar -->
+  <button onclick="enviarWhatsApp()" style="
+    width: 100%;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+  " onmouseover="this.style.background='#1eb858'" onmouseout="this.style.background='#25D366'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.428a.5.5 0 0 0 .609.61l5.7-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.368l-.36-.214-3.724.968.993-3.63-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+    </svg>
+    Enviar por WhatsApp
+  </button>
+
+  <p style="font-size:10px; color:#aaa; text-align:center; margin:12px 0 0;">
+ Tus datos son privados y seguros
+  </p>
+</div>
+
+<!-- Botón verde flotante -->
+<button onclick="abrirPopup()" style="
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: transform 0.2s;
+" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.428a.5.5 0 0 0 .609.61l5.7-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.003-1.368l-.36-.214-3.724.968.993-3.63-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+  </svg>
+  Escríbenos
+</button>
+
+<script>
+  function abrirPopup() {
+    document.getElementById('wa-popup').style.display = 'block';
+    document.getElementById('wa-overlay').style.display = 'block';
+    // Enfocar el primer campo automáticamente
+    setTimeout(() => document.getElementById('wa-nombre').focus(), 100);
+  }
+
+  function cerrarPopup() {
+    document.getElementById('wa-popup').style.display = 'none';
+    document.getElementById('wa-overlay').style.display = 'none';
+  }
+
+  function enviarWhatsApp() {
+    const nombre = document.getElementById('wa-nombre').value.trim();
+    const telefono = document.getElementById('wa-telefono').value.trim();
+
+    // Validar que no estén vacíos
+    if (!nombre) {
+      alert('Por favor escribe tu nombre.');
+      document.getElementById('wa-nombre').focus();
+      return;
+    }
+    if (!telefono) {
+      alert('Por favor escribe tu teléfono.');
+      document.getElementById('wa-telefono').focus();
+      return;
+    }
+
+    const waNumber = "18299139470";
+    const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(telefono)}`;
+
+    window.open(`https://wa.me/${waNumber}?text=${mensaje}`, '_blank');
+    cerrarPopup();
+  }
+</script>
+    </body>
 
 </html>
