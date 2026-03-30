@@ -10,6 +10,26 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
+    <script>
+        // SCRIPT PIXEL META
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1763457057916073');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1763457057916073&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    </script>
 
     <script>
         tailwind.config = {
@@ -28,7 +48,8 @@
                 }
             }
         }
-    </script>
+</script>
+
 
     <style>
         html {
@@ -67,10 +88,7 @@
             }
         }
 
-        /* Animación del carrusel */
-        .carrusel-animado {
-            animation: deslizar 20s linear infinite;
-        }
+
 
         @keyframes deslizar {
             0% {
@@ -224,16 +242,7 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById('heroForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('hero-name').value;
-            const phone = document.getElementById('hero-phone').value;
-            const waNumber = "18299139470";
-            const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}`;
-            window.open(`https://wa.me/${waNumber}?text=${mensaje}`, '_blank');
-        });
-    </script>
+
 
     <!-- EL PROBLEMA -->
     <section class="pt-4 md:pt-16 pb-12 md:pb-20 px-5 bg-white overflow-hidden">
@@ -412,36 +421,46 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-2xl md:text-5xl font-bold text-center mb-12 md:mb-20 text-secondary">¿CÓMO FUNCIONA?</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 md:gap-8 text-center">
 
                 <div class="flex flex-col items-center">
                     <div
                         class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
                         1</div>
-                    <h4 class="text-lg md:text-xl font-bold mb-2">Evaluación</h4>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Evaluación capilar</h4>
                     <p class="text-gray-400 text-xs md:text-sm">Valoración médica personalizada.</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <div
                         class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
                         2</div>
-                    <h4 class="text-lg md:text-xl font-bold mb-2">Diseño de línea capilar</h4>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Diseño de línea frontal</h4>
                     <p class="text-gray-400 text-xs md:text-sm">Línea capilar ideal para tu rostro.</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <div
                         class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
                         3</div>
-                    <h4 class="text-lg md:text-xl font-bold mb-2">Procedimiento</h4>
-                    <p class="text-gray-400 text-xs md:text-sm">Intervención precisa y segura.</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Extracción de folículos</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Procedimiento minimamente invasivo.</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <div
                         class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
                         4</div>
-                    <h4 class="text-lg md:text-xl font-bold mb-2">Seguimiento post</h4>
-                    <p class="text-gray-400 text-xs md:text-sm">Acompañamiento por 12 meses.</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Implantación</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Intervención precisa y segura.</p>
                 </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary text-black font-extrabold text-xl md:text-2xl flex items-center justify-center mb-4 md:mb-6">
+                        5</div>
+                    <h4 class="text-lg md:text-xl font-bold mb-2">Seguimiento post</h4>
+                    <p class="text-gray-400 text-xs md:text-sm">Crecimiento en 6-12 meses dependiendo cada caso.</p>
+                </div>
+
+
+
             </div>
 
             <div class="mt-16 md:mt-20 text-center px-4">
@@ -631,31 +650,7 @@
         </div>
     </footer>
 
-    <script>
-        // Lógica para enviar a WhatsApp con auto-llenado
-        const contactForm = document.getElementById('contactForm');
 
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const name = document.getElementById('form-name').value;
-            const age = document.getElementById('form-age').value;
-            const zone = document.getElementById('form-zone').value;
-            const phone = document.getElementById('form-phone').value;
-
-            // Número de destino 
-            const waNumber = "+18299139470";
-
-            // Mensaje formateado para WhatsApp
-            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Edad:* ${age} años%0A *Teléfono:* ${phone}%0A *Zona de caída:* ${zone}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
-
-            // Crear el enlace final
-            const whatsappUrl = `https://wa.me/${waNumber}?text=${message}`;
-
-            // Abrir en una nueva pestaña
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
     <!-- LIGHTBOX -->
     <div id="lightbox" onclick="cerrarLightbox()" style="
     display: none;
@@ -676,16 +671,7 @@
     ">
     </div>
 
-    <script>
-        function abrirLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
 
-        function cerrarLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-    </script>
 
     <!-- BOTÓN FLOTANTE WHATSAPP CON POPUP -->
 
@@ -852,6 +838,62 @@
     </button>
 
     <script>
+
+
+        // Lógica para enviar a WhatsApp con auto-llenado desde el formulario del hero
+        document.getElementById('heroForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('hero-name').value;
+            const phone = document.getElementById('hero-phone').value;
+            // Evento Lead para Meta
+        fbq('track', 'Lead', { content_name: 'Formulario del Hero' });
+            const waNumber = "18299139470";
+            const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}`;
+            window.open(`https://wa.me/${waNumber}?text=${mensaje}`, '_blank');
+        });
+
+
+
+
+        // Lógica para enviar a WhatsApp con auto-llenado
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+
+            const name = document.getElementById('form-name').value;
+            const age = document.getElementById('form-age').value;
+            const zone = document.getElementById('form-zone').value;
+            const phone = document.getElementById('form-phone').value;
+
+            // Evento Lead para Meta
+        fbq('track', 'Lead', { content_name: 'Formulario de contacto' });
+
+            // Número de destino 
+            const waNumber = "+18299139470";
+
+            // Mensaje formateado para WhatsApp
+            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Edad:* ${age} años%0A *Teléfono:* ${phone}%0A *Zona de caída:* ${zone}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
+
+            // Crear el enlace final
+            const whatsappUrl = `https://wa.me/${waNumber}?text=${message}`;
+
+            // Abrir en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        });
+        // Lógica para el lightbox
+        function abrirLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function cerrarLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Lógica para el popup de WhatsApp
         function abrirPopup() {
             document.getElementById('wa-popup').style.display = 'block';
             document.getElementById('wa-overlay').style.display = 'block';
@@ -879,7 +921,8 @@
                 document.getElementById('wa-telefono').focus();
                 return;
             }
-
+            // Evento Lead para Meta
+        fbq('track', 'Lead', { content_name: 'Popup WhatsApp' });
             const waNumber = "18299139470";
             const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(telefono)}`;
 
