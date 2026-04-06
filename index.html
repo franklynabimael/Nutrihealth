@@ -151,7 +151,7 @@
                 </a>
             </div>
 
-            <a href="#contacto"
+            <a href="#contacto" id="cta-nav"
                 class="bg-primary text-white px-4 py-2 md:px-7 md:py-3 rounded-full font-bold text-[10px] md:text-sm shadow-lg hover:bg-accent transition-all">
                 CITA GRATIS
             </a>
@@ -179,7 +179,7 @@
 
             <!-- CTA -->
             <div class="flex flex-col md:flex-row gap-4 mb-10 md:mb-12 w-full md:w-auto justify-center px-4 md:px-0">
-                <a href="#contacto"
+                <a href="#contacto" id="cta-hero"
                     class="bg-secondary text-black px-6 py-4 md:px-10 md:py-5 rounded-2xl font-extrabold text-base md:text-xl shadow-[0_15px_30px_-5px_rgba(193,207,70,0.4)] hover:scale-105 active:scale-95 transition-transform text-center">
                     QUIERO MI EVALUACIÓN GRATIS
                 </a>
@@ -209,7 +209,7 @@
                 <div class="flex items-center gap-2"><span class="text-primary">✔</span> Hasta 5,000 Grafts</div>
                 <div class="flex items-center gap-2"><span class="text-primary">✔</span> De 6 a 8 Horas de Procedimiento
                 </div>
-                <div class="flex items-center gap-2"><span class="text-primary">✔</span> +4,000 Pacientes Satisfechos
+                <div class="flex items-center gap-2"><span class="text-primary">✔</span> Certificado de Garantía por escrito
                 </div>
                 <div class="flex items-center gap-2"><span class="text-primary">✔</span> Especialistas Certificados
                 </div>
@@ -222,7 +222,7 @@
                 <div class="bg-white/80 backdrop-blur-sm rounded-2xl border border-primary/20 p-4 md:p-6 shadow-sm">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
                         <div>
-                            <div class="text-2xl md:text-3xl font-extrabold text-primary">4,200+</div>
+                            <div class="text-2xl md:text-3xl font-extrabold text-primary">4,000+</div>
                             <div class="text-[10px] md:text-xs text-darkGrey font-semibold uppercase tracking-wide">Pacientes Satisfechos</div>
                         </div>
                         <div>
@@ -348,7 +348,7 @@
             </div>
 
             <div class="text-center px-4">
-                <a href="#contacto"
+                <a href="#contacto" id="cta-solucion"
                     class="inline-block w-full md:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl shadow-xl hover:bg-accent transition-all">
                     VER SI SOY CANDIDATO
                 </a>
@@ -408,7 +408,7 @@
             </div>
 
             <div class="mt-16 md:mt-20 text-center px-4">
-                <a href="#contacto"
+                <a href="#contacto" id="cta-como-funciona"
                     class="inline-block w-full md:w-auto bg-secondary text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 active:scale-95 transition-all">
                     AGENDA MI TRANSFORMACIÓN
                 </a>
@@ -962,6 +962,40 @@
             }
         });
 
+        // ========================================
+        // TRACKING DE CLICS EN CTAs (Meta Pixel)
+        // ========================================
+        function trackCTAClick(ctaName) {
+            fbq('track', 'ViewContent', {
+                content_name: 'CTA Click: ' + ctaName,
+                content_category: 'CTA Button Click',
+                event_source: 'website'
+            });
+        }
+
+        // Agregar tracking a todos los botones CTA
+        document.addEventListener('DOMContentLoaded', function() {
+            // Nav CTA
+            var navCTA = document.getElementById('cta-nav');
+            if (navCTA) navCTA.addEventListener('click', function() { trackCTAClick('Nav - Cita Gratis'); });
+
+            // Hero CTA principal
+            var heroCTA = document.getElementById('cta-hero');
+            if (heroCTA) heroCTA.addEventListener('click', function() { trackCTAClick('Hero - Evaluación Gratis'); });
+
+            // CTA "Ver si soy candidato" (sección solución)
+            var solutionCTA = document.getElementById('cta-solucion');
+            if (solutionCTA) solutionCTA.addEventListener('click', function() { trackCTAClick('Solución - Ver si soy candidato'); });
+
+            // CTA "Agenda mi transformación" (sección cómo funciona)
+            var howItWorksCTA = document.getElementById('cta-como-funciona');
+            if (howItWorksCTA) howItWorksCTA.addEventListener('click', function() { trackCTAClick('Cómo Funciona - Agenda mi transformación'); });
+
+            // Botón WhatsApp flotante
+            var waButton = document.querySelector('button[onclick="abrirPopup()"]');
+            if (waButton) waButton.addEventListener('click', function() { trackCTAClick('WhatsApp Float Button'); });
+        });
+
         // Validación de formularios
         function validatePhone(phone) {
             const phoneRegex = /^[\d\s\-\+]{7,15}$/;
@@ -991,8 +1025,13 @@
                 return;
             }
 
-            // Evento Lead para Meta
-            fbq('track', 'Lead', { content_name: 'Formulario del Hero' });
+            // Evento Lead para Meta - Formulario Hero
+            fbq('track', 'Lead', {
+                content_name: 'Hero Form - Quick Submit',
+                content_category: 'Form: Hero (Name + Phone)',
+                form_position: 'Below Hero Section',
+                lead_source: 'Hero Form'
+            });
             const waNumber = "18299139470";
             const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}`;
             window.open(`https://wa.me/${waNumber}?text=${mensaje}`, '_blank');
@@ -1029,8 +1068,14 @@
                 return;
             }
 
-            // Evento Lead para Meta
-            fbq('track', 'Lead', { content_name: 'Formulario de contacto' });
+            // Evento Lead para Meta - Formulario de Contacto
+            fbq('track', 'Lead', {
+                content_name: 'Contact Form - Full Submit',
+                content_category: 'Form: Contact (Name + Phone + Zone)',
+                form_position: 'Bottom Contact Section',
+                lead_source: 'Contact Form',
+                hair_loss_zone: zone
+            });
 
             // Número de destino
             const waNumber = "18299139470";
@@ -1082,8 +1127,13 @@
                 document.getElementById('wa-telefono').focus();
                 return;
             }
-            // Evento Lead para Meta
-            fbq('track', 'Lead', { content_name: 'Popup WhatsApp' });
+            // Evento Lead para Meta - Popup WhatsApp
+            fbq('track', 'Lead', {
+                content_name: 'WhatsApp Popup - Submit',
+                content_category: 'Form: WhatsApp Popup (Name + Phone)',
+                form_position: 'Floating WhatsApp Button',
+                lead_source: 'WhatsApp Popup'
+            });
             const waNumber = "18299139470";
             const mensaje = `Hola Nutrihealth! Me interesa una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(telefono)}`;
 
