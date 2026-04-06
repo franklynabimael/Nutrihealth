@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriHealth - Trasplante Capilar #1 en República Dominicana</title>
     <meta name="description" content="Clínica de trasplante capilar FUE + DHI con más de 10 años de experiencia y +4,000 pacientes satisfechos. Evaluación gratuita. 9 sucursales en República Dominicana.">
     <meta name="keywords" content="trasplante capilar, implante cabello, FUE, DHI, alopecia, República Dominicana, NutriHealth">
@@ -36,7 +36,6 @@
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1763457057916073&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
-    </script>
 
     <script>
         tailwind.config = {
@@ -755,10 +754,10 @@
     <div id="cookieNotice" class="fixed bottom-0 left-0 right-0 bg-white border-t border-softGrey shadow-lg p-4 md:p-6 z-50 hidden">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-xs md:text-sm text-darkGrey text-center md:text-left">
-                🍪 Usamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.
+                Este sitio utiliza cookies para mejorar tu experiencia.
             </p>
             <div class="flex gap-3 flex-shrink-0">
-                <button onclick="acceptCookies()" class="bg-primary text-white px-6 py-2 rounded-xl font-bold text-sm hover:bg-accent transition-all">Aceptar</button>
+                <button onclick="acceptCookies()" class="bg-primary text-white px-6 py-2 rounded-xl font-bold text-sm hover:bg-accent transition-all">Entendido</button>
             </div>
         </div>
     </div>
@@ -1049,10 +1048,10 @@
             fbq('track', 'Lead', { content_name: 'Formulario de contacto' });
 
             // Número de destino
-            const waNumber = "+18299139470";
+            const waNumber = "18299139470";
 
             // Mensaje formateado para WhatsApp
-            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${name}%0A *Teléfono:* ${phone}%0A *Zona de caída:* ${zone}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
+            const message = `Hola Nutrihealth, me gustaría agendar una evaluación capilar gratuita.%0A%0A*Mis datos:*%0A *Nombre:* ${encodeURIComponent(name)}%0A *Teléfono:* ${encodeURIComponent(phone)}%0A *Zona de caída:* ${encodeURIComponent(zone)}%0A%0AQuisiera recibir más información sobre sus tratamientos.`;
 
             // Crear el enlace final
             const whatsappUrl = `https://wa.me/${waNumber}?text=${message}`;
