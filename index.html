@@ -572,9 +572,9 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div class="md:w-1/2 relative w-full order-2 md:order-1">
                 <div
-                    class="bg-softGrey h-48 md:h-[600px] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm">
+                    class="bg-softGrey h-64 md:h-[600px] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm overflow-hidden">
                     <video src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Video2.mp4"
-                        class="w-full h-full object-cover" controls playsinline loop></video>
+                        class="w-full h-full object-contain" controls playsinline loop></video>
                 </div>
                 <div
                     class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-white shadow-xl p-4 md:p-6 rounded-2xl border border-softGrey flex items-center gap-3 md:gap-4">
@@ -959,21 +959,6 @@
         window.addEventListener('DOMContentLoaded', function() {
             if (!localStorage.getItem('cookiesAccepted')) {
                 document.getElementById('cookieNotice').classList.remove('hidden');
-            }
-        });
-
-        // Mobile Sticky CTA Bar
-        const stickyCTA = document.createElement('div');
-        stickyCTA.id = 'mobileStickyCTA';
-        stickyCTA.innerHTML = '<a href="#contacto" style="display:block;width:100%;text-align:center;padding:14px;background:#1e692d;color:white;font-weight:800;font-size:14px;text-decoration:none;letter-spacing:0.05em;">EVALUACIÓN GRATUITA →</a>';
-        stickyCTA.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:9997;box-shadow:0 -4px 20px rgba(0,0,0,0.15);';
-        document.body.appendChild(stickyCTA);
-
-        window.addEventListener('scroll', function() {
-            if (window.innerWidth < 768 && window.scrollY > 600) {
-                stickyCTA.style.display = 'block';
-            } else {
-                stickyCTA.style.display = 'none';
             }
         });
 
