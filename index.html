@@ -186,15 +186,10 @@
             </div>
 
             <!-- VIDEO -->
-            <div class="w-full max-w-4xl mx-auto mb-8 md:mb-10">
-                <div class="p-1.5 md:p-4 bg-white rounded-3xl md:rounded-[2.5rem] shadow-2xl border border-softGrey">
-                    <div class="video-aspect rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden bg-black">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/p5tNVhAwkt4?si=g3eY6OGLNyfvD0CA&amp;controls=0"
-                            title="Las Mejores Transformaciones Antes y Después" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+            <div class="w-full max-w-sm mx-auto mb-8 md:mb-10">
+                <div class="rounded-[1.2rem] md:rounded-[1.8rem] overflow-hidden shadow-2xl" style="height:420px; background:transparent;">
+                    <video id="hero-video" src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Video2.mp4"
+                        class="w-full h-full object-contain" controls playsinline loop></video>
                 </div>
             </div>
 
@@ -239,10 +234,10 @@
                         </div>
                     </div>
                     <!-- Logos de confianza -->
-                    <div class="flex flex-wrap justify-center gap-4 md:gap-8 mt-4 pt-4 border-t border-softGrey text-[9px] md:text-xs text-darkGrey/60 font-semibold uppercase tracking-wider">
-                        <span>🏥 Supervisión Médica Real</span>
-                        <span>✅ Certificados INDOCAL</span>
-                        <span>🏆 Avalados por Salud Pública</span>
+                    <div class="flex flex-wrap justify-center gap-4 md:gap-8 mt-4 pt-4 border-t border-softGrey text-[9px] md:text-xs text-secondary font-semibold uppercase tracking-wider">
+                        <span><i class="fa-solid fa-hand-holding-medical"></i></i> Supervisión Médica Real</span>   
+                        <span><i class="fa-solid fa-circle-check"></i> Certificados INDOCAL</span>
+                        <span><i class="fa-solid fa-award"></i> Avalados por Salud Pública</span>
                     </div>
                 </div>
             </div>
@@ -269,7 +264,7 @@
                     ENVIAR
                 </button>
             </form>
-            <p class="text-[10px] text-white/60 mt-3">🔒 Tu información es 100% confidencial. Sin compromiso.</p>
+            <p class="text-[10px] text-white/60 mt-3"><i class="fa-solid fa-lock"></i> Tu información es 100% confidencial. Sin compromiso.</p>
         </div>
     </section>
 
@@ -352,7 +347,7 @@
                     class="inline-block w-full md:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg md:text-xl shadow-xl hover:bg-accent transition-all">
                     VER SI SOY CANDIDATO
                 </a>
-                <p class="text-xs text-darkGrey/60 mt-3">Evaluación gratuita</p>
+                <p class="text-xs text-darkGrey/60 mt-3"><i class="fa-solid fa-info-circle"></i> Evaluación gratuita</p>
             </div>
         </div>
     </section>
@@ -572,9 +567,14 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div class="md:w-1/2 relative w-full order-2 md:order-1">
                 <div
-                    class="bg-softGrey h-64 md:h-[600px] rounded-3xl border border-softGrey flex items-center justify-center text-gray-300 font-bold p-10 text-center italic text-sm overflow-hidden">
-                    <video src="https://nutrihealth.com.do/wp-content/uploads/2026/02/Video2.mp4"
-                        class="w-full h-full object-contain" controls playsinline loop></video>
+                    class="bg-softGrey rounded-3xl border border-softGrey overflow-hidden">
+                    <div class="video-aspect rounded-3xl overflow-hidden bg-black">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/p5tNVhAwkt4?si=g3eY6OGLNyfvD0CA&amp;controls=0"
+                            title="Transformaciones de pacientes NutriHealth" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div
                     class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-white shadow-xl p-4 md:p-6 rounded-2xl border border-softGrey flex items-center gap-3 md:gap-4">
@@ -585,10 +585,10 @@
                 </div>
             </div>
             <div class="md:w-1/2 order-1 md:order-2">
-                <div class="text-gold font-semibold italic text-sm mb-2">Orgullosamente dominicanos</div>
+                
                 <h2 class="text-2xl md:text-5xl font-bold mb-6 md:mb-8 text-primary">QUIÉNES SOMOS</h2>
                 <div class="space-y-4 md:space-y-6 text-darkGrey leading-relaxed text-sm md:text-base">
-                    <p class="font-semibold text-primary">Bajo la Dirección Médica de la Dra. Emely E. Rodriguez Perez</p>
+                    
                     <p>Contamos con más de <strong class="text-primary">10 años de experiencia</strong> en el país,
                         respaldados por un equipo de especialistas dominicanos y colombianos, incluyendo cirujano
                         capilar y dermatólogo cirujano altamente capacitados.</p>
@@ -596,7 +596,7 @@
                         garantizando resultados naturales y seguros. Nuestra clínica está ubicada en una zona premium
                         del Distrito Nacional y estamos debidamente avalados por Salud Pública y Certificados por
                         INDOCAL, lo que te brinda la confianza y seguridad que mereces.</p>
-                    <p class="font-semibold text-primary">Con 9+ sucursales en todo el país, somos la clínica de trasplante capilar #1 en República Dominicana.</p>
+                   
                 </div>
             </div>
         </div>
@@ -721,7 +721,7 @@
                             AGENDAR MI TRANSFORMACIÓN
                         </button>
                     </form>
-                    <p class="text-[10px] text-darkGrey/50 mt-4 text-center">🔒 Tu información es 100% confidencial. Sin compromiso.</p>
+                    <p class="text-[10px] text-darkGrey/50 mt-4 text-center"><i class="fa-solid fa-lock"></i> Tu información es 100% confidencial. Sin compromiso.</p>
                 </div>
             </div>
         </div>
@@ -735,7 +735,6 @@
                 <img src="https://nutrihealth.com.do/wp-content/uploads/2025/10/cropped-nutrihealth-logo-nuevo.png"
                     alt="Logo Nutrihealth Footer" class="h-8 md:h-12 w-auto object-contain mb-2">
             </div>
-            <p class="text-xs md:text-sm text-darkGrey mb-2 font-semibold">La Clínica de Trasplante Capilar #1 en República Dominicana</p>
             <p class="text-[9px] text-gray-400 leading-relaxed max-w-sm mx-auto">
                 Distrito Nacional, Santo Domingo. 9+ sucursales en todo el país.<br>
                 © 2026 Nutrihealth.com.do — Todos los derechos reservados.
@@ -994,6 +993,16 @@
             // Botón WhatsApp flotante
             var waButton = document.querySelector('button[onclick="abrirPopup()"]');
             if (waButton) waButton.addEventListener('click', function() { trackCTAClick('WhatsApp Float Button'); });
+
+            // Autoplay del video del hero después de 3 segundos con volumen
+            var heroVideo = document.getElementById('hero-video');
+            if (heroVideo) {
+                setTimeout(function() {
+                    heroVideo.play().catch(function(e) {
+                        console.log('Autoplay bloqueado por el navegador:', e);
+                    });
+                }, 3000);
+            }
         });
 
         // Validación de formularios
@@ -1141,6 +1150,7 @@
             cerrarPopup();
         }
     </script>
+    <script src="https://kit.fontawesome.com/8bce970b2e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
